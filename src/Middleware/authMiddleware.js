@@ -1,8 +1,6 @@
 import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
 
-dotenv.config();
-const { JWT_SECRET } = process.env;
+const JWT_SECRET = 'SpotlessAi2024';
 
 const verifyToken = async (req, res, next) => {
   try {
@@ -39,5 +37,3 @@ const verifyToken = async (req, res, next) => {
 };
 
 export { verifyToken };
-
-
